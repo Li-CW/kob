@@ -1,27 +1,30 @@
 <template>
-  helloworld
+  <!-- 导航栏 -->
+  <NavBar/>
+  <!-- 控制页面 -->
+  <router-view></router-view>
 </template>
 
 <script>
-import axios from "axios"
+// 导入boostrap
+// 会报错，在脚手架里依赖导入：@popperjs/core
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap';
+import NavBar from "./components/NavBar.vue"
 export default {
-  name: "App",
-  setup: () => {
-    axios.get("http://127.0.0.1:3000/pk/getbotinfo/")
-      .then((response) => {
-        console.log(response);
-      })
+  components: {
+    NavBar
   }
-
 }
 
 
 </script>
-
+<!-- 不要加 scoped -->
 <style>
 body{
-  background-image: url("./assets/background.png");
-  background-size: cover;
+  background-image: url("./assets/images/background.png");
+  /* 背景图片百分百覆盖窗口 */
+  background-size: 100vw 100vh;
 }
 </style>
 
