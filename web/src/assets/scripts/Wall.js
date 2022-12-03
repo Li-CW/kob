@@ -12,27 +12,27 @@
 */
 import { AcGameObject } from "./AcGameObject";
 export class Wall extends AcGameObject {
-  constructor(r, c, gamemap) {
-    // 将对象放入ACG数据
-    super();
-    this.r = r;
-    this.c = c;
-    this.gamemap = gamemap;
-    this.color = "#B37226";
-  }
+    constructor(r, c, gamemap) {
+        // 将对象放入ACG数据
+        super();
+        this.r = r;
+        this.c = c;
+        this.gamemap = gamemap;
+        this.color = "#B37226";
+    }
 
-  update() {
-    this.render();
-  }
+    update() {
+        this.render();
+    }
 
-  render() {
-    // 获得单位长度
-    const L = this.gamemap.L;
-    // 获取画布
-    const ctx = this.gamemap.ctx;
-    // 设置颜色
-    ctx.fillStyle = this.color;
-    // 画出一块墙体
-    ctx.fillRect(this.c * L, this.r * L, L, L);
-  }
+    render() {
+        // 获得单位长度
+        const L = this.gamemap.L;
+        // 获取画布
+        const ctx = this.gamemap.ctx;
+        // 设置颜色
+        ctx.fillStyle = this.color;
+        // 画出一块墙体
+        ctx.fillRect(this.c * L, this.r * L, L, L);
+    }
 }

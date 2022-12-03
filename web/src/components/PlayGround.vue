@@ -1,9 +1,12 @@
+<!-- 
+    地图背景
+ -->
 <template>
     <!-- 背景 -->
-   <div class="playground">
-    <!-- 地图 -->
-    <GameMap/>
-   </div>
+    <div class="playground">
+        <!-- 地图 -->
+        <GameMap />
+    </div>
 </template>
 
 <script>
@@ -15,18 +18,19 @@ export default ({
         GameMap,
     },
     setup() {
-        
+
     },
 })
 </script>
 
 <style scoped>
-.playground{
+/* 背景的颜色和大小 */
+.playground {
     width: 60vw;
     height: 70vh;
     background-color: bisque;
     margin: 40px auto;
-    
+
 }
 </style>
 

@@ -10,7 +10,7 @@
     <!-- ref作用：与当前dom元素关联 -->
     <div ref="parent" class="gamemap">
         <!-- 画布 -->
-        <canvas ref="canvas"></canvas>
+        <canvas ref="canvas" tabindex="0"></canvas>
     </div>
 </template>
 
