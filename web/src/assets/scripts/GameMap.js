@@ -108,12 +108,9 @@ export class GameMap extends AcGameObject {
         }
         return true;
     }
-
-
-
+    // 监听键盘输入，控制蛇运动
     add_listening_enents() {
         this.ctx.canvas.focus();
-
         const [snake0, snake1] = this.snakes;
         this.ctx.canvas.addEventListener("keydown", e => {
             if (e.key === 'w') snake0.set_direction(0);
@@ -151,14 +148,17 @@ export class GameMap extends AcGameObject {
         this.ctx.canvas.width = this.L * this.cols;
         this.ctx.canvas.height = this.L * this.rows;
     }
-
+    // 蛇是否可以走下一步 
     check_ready() {
+        // 循环判断两条蛇
         for (const snake of this.snakes) {
+            // 不是限制
             if (snake.status !== "idle") return false;
             if (snake.direction === -1) return false;
         }
         return true;
     }
+    // 让地图中的所有蛇走下一步
     next_step() {
         for (const snake of this.snakes) {
             snake.next_step();
@@ -178,7 +178,7 @@ export class GameMap extends AcGameObject {
             if (!snake.check_tail_incresing())
                 k--;
             // 蛇头是否撞到了身体
-            for (let i = 0; i < k; i++){
+            for (let i = 0; i < k; i++) {
                 if (snake.cells[i].r === cell.r && snake.cells[i].c === cell.c)
                     return false;
             }
