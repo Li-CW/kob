@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
+    //自动调用对应的实现类生成对象
     @Autowired
     private UserMapper userMapper;
 

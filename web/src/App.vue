@@ -11,10 +11,27 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap';
 import NavBar from "./components/NavBar.vue"
+
 export default {
   components: {
     NavBar
-  }
+    },
+    setup() {
+
+
+        // const options3 = {
+        //     method: "post",
+        //     url: "http://127.0.0.1:3000/user/account/register/",
+        //     data: {
+        //         username: "a",
+        //         password: "pa",
+        //         confirmedPassword: "pa",
+        //     }
+        // }
+        // axios(options3).then((response) => {
+        //     console.log(response.data);
+        // })
+    }
 }
 
 

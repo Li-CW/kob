@@ -1,3 +1,7 @@
+/*
+处理跨域
+ */
+
 package com.kob.backend.config;
 
 import org.springframework.context.annotation.Configuration;
